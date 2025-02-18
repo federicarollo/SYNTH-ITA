@@ -1,12 +1,15 @@
-import ast
 import json
-import copy
-
 
 from random import randint
 from datetime import datetime, timedelta
 
-from utils import preserve_tuples, restore_tuples, select_elements_from_collections, clean_italian_span
+from utils import (
+                    preserve_tuples,
+                    restore_tuples,
+                    select_elements_from_collections,
+                    clean_italian_span,
+                    numbers_to_numeric_word
+)
 
 
 datapath = 'data'

@@ -17,6 +17,63 @@ apostrophe = [
                 "l'", "all'", "nell'", "dell'", "dall'", "coll'", "sull'", "un'",
 ]
 
+numbers_to_numeric_word = {
+                                '1': 'uno',
+                                '2': 'due',
+                                '3': 'tre',
+                                '4': 'quattro',
+                                '5': 'cinque',
+                                '6': 'sei',
+                                '7': 'sette',
+                                '8': 'otto',
+                                '9': 'nove',
+                                '10': 'dieci',
+                                '11': 'undici',
+                                '12': 'dodici',
+                                '13': 'tredici',
+                                '14': 'quattordici',
+                                '15': 'quindici',
+                                '16': 'sedici',
+                                '17': 'diciassette',
+                                '18': 'diciotto',
+                                '19': 'diciannove',
+                                '20': 'venti',
+                                '25': 'venticinque',
+                                '30': 'trenta',
+                                '35': 'trentacinque',
+                                '40': 'quaranta',
+                                '45': 'quarantacinque',
+                                '50': 'cinquanta',
+                                '55': 'cinquantacinque',
+                                '60': 'sessanta',
+                                '65': 'sessantacinque',
+                                '70': 'settanta',
+                                '75': 'settantacinque',
+                                '80': 'ottanta',
+                                '85': 'ottantacinque',
+                                '90': 'novanta',
+                                '100': 'cento',
+                                '200': 'duecento',
+                                '300': 'trecento',
+                                '400': 'quattrocento',
+                                '500': 'cinquecento',
+                                '600': 'seicento',
+                                '700': 'settecento',
+                                '800': 'ottocento',
+                                '900': 'novecento',
+                                '1000': 'mille',
+                                '2000': 'duemila',
+                                '3000': 'tremila',
+                                '4000': 'quattromila',
+                                '5000': 'cinquemila',
+                                '6000': 'seimila',
+                                '7000': 'settemila',
+                                '8000': 'ottomila',
+                                '9000': 'novemila'
+}
+
+numeric_word_to_numbers = {v: k for k, v in numbers_to_numeric_word.items()}
+
 
 def clean_from_apostrophe(sentence):
     done = False
