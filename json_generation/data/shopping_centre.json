@@ -1,0 +1,56 @@
+[
+    {
+        "name": "I Gelsi",
+        "town": "Modena",
+        "street": "Via Vignolese",
+        "internals": [{"type": "supermarket", "name": "Coop"}, {"type": "bar", "name": "Buona Pausa Coop"}, {"type": "bar", "name": "Alessia"}]
+    },
+    {
+        "name": "La Rotonda",
+        "town": "Modena",
+        "street": "strada Morane",
+        "internals": []
+    },
+    {
+        "name": "I Portali",
+        "town": "Modena",
+        "street": "viale dello Sport",
+        "internals": []
+    },
+    {
+        "name": "Grandemilia",
+        "town": "Modena",
+        "street": "via Emilia Ovest",
+        "internals": [{"type": "electronics", "name": "Mediaworld"}]
+    },
+    {
+        "name": "Torrenova",
+        "town": "Modena",
+        "street": "via Nonantolana",
+        "internals": []
+    },
+    {
+        "name": "Centro Commerciale Gemma",
+        "town": "Sassuolo",
+        "street": " Via Archimede",
+        "internals": [{"type": "supermarket", "name": "Iper Rossetto"}]
+    },
+    {
+        "name": "Il Borgogioioso",
+        "town": "Carpi",
+        "street": " Viale dell'industria",
+        "internals": [{"type": "supermarket", "name": "Iper Coop"}]
+    },
+    {
+        "name": "Carpi Ponente",
+        "town": "Carpi",
+        "street": " Tangenziale Bruno Losi",
+        "internals": []
+    },
+    {
+        "name": "I Ciliegi",
+        "town": "Vignola",
+        "street": "Via di Mezzo",
+        "internals": []
+    }
+]

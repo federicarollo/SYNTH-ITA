@@ -1,0 +1,151 @@
+{
+  "categories": [
+                  {
+                    "company_type": "ice_cream_shop",
+                    "expressions": ["gelateria"],
+                    "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "gelatieria", "plural": "gelateriere"},
+                        {"singular": "torta gelato", "plural": "torte gelato"},
+                        {"singular": "cassa", "plural": "casse"},
+                        {"singular": "bilancia", "plural": "bilance"}
+                    ]
+                  },
+                  {
+                    "company_type": "bar",
+                    "expressions": ["bar"],
+                    "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "macchinetta del caffè", "plural": "macchinette del caffè"},
+                        {"singular": "sedia", "plural": "sedie"},
+                        {"singular": "tavolo", "plural": "tavoli"},
+                        {"singular": "bibita", "plural": "bibite"},
+                        {"singular": "sacchetto di patatine", "plural": "sacchetti di patatine"},
+                        {"singular": "cassa", "plural": "casse"},
+                        {"singular": "macchina del ghiaccio", "plural": "macchine del ghiaccio"}
+                    ]
+                  },
+                  {
+                    "company_type": "shopping_centre",
+                    "expressions": ["negozio di abbigliamento", "negozio"],
+                    "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "capo d'abbigliamento", "plural": "capi d'abbigliamento"},
+                        {"singular": "paio di scarpe", "plural": "paia di scarpe"},
+                        {"singular": "camicia", "plural": "camicie"},
+                        {"singular": "jeans", "plural": "jeans"},
+                        {"singular": "pantalone", "plural": "pantaloni"},
+                        {"singular": "maglietta", "plural": "magliette"},
+                        {"singular": "borsa", "plural": "borse"},
+                        {"singular": "orologio", "plural": "orologi"}
+                    ]
+                  },
+                  {
+                    "company_type": "mechanical_workshop",
+                    "expressions": ["officina", "meccanico", "officina meccanica"],
+                      "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "pneumatico", "plural": "pneumatici"},
+                        {"singular": "componente per macchine", "plural": "componenti per macchine"},
+                        {"singular": "attrezzo da lavoro", "plural": "attrezzi da lavoro"},
+                        {"singular": "avvitatore", "plural": "avvitatori"},
+                        {"singular": "pompa", "plural": "pompe"},
+                        {"singular": "cinghia", "plural": "cinghie"},
+                        {"singular": "bomboletta spray", "plural": "bombolette spray"},
+                        {"singular": "cric", "plural": "cric"},
+                        {"singular": "chiave inglese", "plural": "chiavi inglesi"}
+                    ]
+                  },
+                  {
+                    "company_type": "tyre_fitter",
+                    "expressions": ["negozio di gomme", "gommista"],
+                    "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "pneumatico", "plural": "pneumatici"},
+                        {"singular": "pompa", "plural": "pompe"},
+                        {"singular": "compressore", "plural": "compressori"}
+                    ]
+                  },
+
+                  {
+                    "company_type": "jewelry",
+                    "expressions": ["gioielleria", "negozio di gioielli"],
+                    "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "monile", "plural": "monili"},
+                        {"singular": "collana", "plural": "collane"},
+                        {"singular": "orologio", "plural": "orologi"},
+                        {"singular": "anello", "plural": "anelli"},
+                        {"singular": "bracciale", "plural": "bracciali"},
+                        {"singular": "pietra preziosa", "plural": "pietre preziose"}
+                      ]
+                  },
+                  {
+                    "company_type": "gym",
+                    "expressions": ["palestra"],
+                    "objects": [
+                        {"singular": "incasso"},
+                        {"singular": "attrezzi da palestra", "plural": "attrezzi da palestra"},
+                        {"singular": "pesi", "plural": "pesi"},
+                        {"singular": "tappeto elastico", "plural": "tappeti elastici"},
+                        {"singular": "cyclette", "plural": "cyclette"},
+                        {"singular": "panca per gli addominali", "plural": "panche per gli addominali"},
+                        {"singular": "tapis roulant", "plural": "tapis roulant"}
+                    ]
+                  },
+                  {
+                    "company_type": "sport_centre",
+                    "expressions": ["polisportiva", "istituto polisportivo"],
+                    "objects": [
+                        {"singular": "attrezzatura sportiva", "plural": "attrezzature sportive"},
+                        {"singular": "pallone", "plural": "palloni"},
+                        {"singular": "rete", "plural": "reti"},
+                        {"singular": "pompa", "plural": "pompe"},
+                        {"singular": "racchetta da tennis", "plural": "racchette da tennis"},
+                        {"singular": "trofeo", "plural": "trofei"},
+                        {"singular": "medaglia", "plural": "medaglie"},
+                        {"singular": "bicicletta", "plural": "biciclette"},
+                        {"singular": "casco", "plural": "caschi"}
+                    ]
+                  },
+                  {
+                    "company_type": "supermarket",
+                    "expressions": ["supermercato"],
+                    "objects": [
+                        {"singular": "generi alimentari", "plural": "generi alimentari"},
+                        {"singular": "carrello", "plural": "carrelli"},
+                        {"singular": "cassa", "plural": "casse"},
+                        {"singular": "registratore di cassa", "plural": "registratori di cassa"}
+                    ]
+                  },
+                  {
+                    "company_type": "electronics",
+                    "expressions": ["negozio di elettronica", "negozio"],
+                    "objects": [
+                        {"singular": "telefonino", "plural": "telefonini"},
+                        {"singular": "cellulare", "plural": "cellulari"},
+                        {"singular": "IPhone", "plural": "IPhone"},
+                        {"singular": "cellulare Samsung", "plural": "cellulari Samsung"},
+                        {"singular": "cuffiette", "plural": "cuffiette"},
+                        {"singular": "airpods", "plural": "airpods"},
+                        {"singular": "chiavetta usb", "plural": "chiavette usb"},
+                        {"singular": "televisore", "plural": "televisori"},
+                        {"singular": "computer portatile", "plural": "computer portatili"},
+                        {"singular": "portatile", "plural": "portatili"},
+                        {"singular": "portatile Lenovo", "plural": "portatili Lenovo"},
+                        {"singular": "portatile Acer", "plural": "portatili Acer"},
+                        {"singular": "fotocamera", "plural": "fotocamere"},
+                        {"singular": "console", "plural": "console"}
+                    ]
+                  },
+                  {
+                    "company_type": "ceramics",
+                    "expressions": ["azienda ceramica", "ceramica"],
+                    "objects": [
+                        {"singular": "piastrella", "plural": "piastrelle"},
+                        {"singular": "macchinario", "plural": "macchinari"},
+                        {"singular": "veicolo di sorveglianza", "plural": "veicoli di sorveglianza"}
+                    ]
+                  }        
+        ]
+}
