@@ -1,0 +1,15 @@
+Immagina di essere un giornalista che riceve le informazioni in merito ad un furto in un JSON, scrivi una notizia in lingua italiana, in stile giornalistico, utilizzando le informazioni fornite nel JSON.  Aggiungi un contesto, una dinamica all'avvenimento, senza aggiungere ulteriori dettagli sulle entità descritte nel JSON.
+La notizia deve includere tutte le informazioni disponibili nel JSON così come sono, senza riformulazioni.
+
+Il JSON può includere informazioni nei seguenti campi:
+  • AUT: Lista di sottoliste di stringhe, ciascuna delle quali contiene stringhe descriventi un singolo autore del furto (es. nome, età, sesso, occupazione, precedenti penali). Se il campo è vuoto, descrivere l'autore con termini generici come "ladro", "malvivente", "criminale" etc.
+  • AUTG: Lista di stringhe descriventi un intero gruppo criminale.
+  • OBJ: Lista di sottoliste di stringhe, ciascuna delle quali contiene stringhe descriventi un singolo oggetto rubato, con quantità se specificata. Tutti gli oggetti devono essere menzionati nel testo generato.
+  • VIC: Lista di sottoliste di stringhe, ciascuna delle quali contiene stringhe descriventi una singola vittima del furto (es. nome, età, occupazione). Se vuoto, usare termini generici come "vittima", "malcapitato" etc.
+  • VICG: Lista di stringhe descriventi un intero gruppo di vittime.
+  • PAR: Contiene la ragione sociale di un'attività commerciale, ente pubblico o associazione colpita dal furto.
+  • LOC: Luogo del furto (es. città, via, tipo di struttura).
+
+Regole logiche:
+  • Se AUTG contiene del testo questo deve essere usato per descrivere un gruppo criminale, mentre il contenuto di AUT, se presente, descrive i singoli autori del gruppo.
+  • Se VICG contiene del testo questo deve essere usato per descrivere un gruppo di vittime, mentre il contenuto di VIC descrive le singole vittime.

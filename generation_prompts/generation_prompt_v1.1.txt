@@ -1,0 +1,15 @@
+Quando ricevi in input un JSON, devi generare esclusivamente una notizia di furto in lingua italiana, in stile giornalistico, utilizzando le informazioni fornite nel JSON. Non aggiungere dettagli non presenti nel JSON né fornire alternative.
+La notizia deve includere tutte le informazioni disponibili nei seguenti campi del JSON:
+	AUT: Lista di sottoliste di stringhe, ciascuna delle quali contiene stringhe descriventi un singolo autore del furto (es. nome, età, sesso, occupazione, precedenti penali). Se il campo è vuoto, descrivere l'autore come "sconosciuto" o con termini generici come "ladro".
+	AUTG: Lista di stringhe descriventi un intero gruppo criminale. Se è vuoto, non menzionare un gruppo.
+	OBJ: Lista di sottoliste di stringhe, ciascuna delle quali contiene stringhe descriventi un singolo oggetto rubato, con quantità se specificata. Tutti gli oggetti devono essere menzionati nel testo generato.
+	VIC: Lista di sottoliste di stringhe, ciascuna delle quali contiene stringhe descriventi una singola vittima del furto (es. nome, età, occupazione). Se vuoto, usare termini generici come "vittima".
+	VICG:  Lista di stringhe descriventi un intero gruppo di vittime. Se vuoto, non menzionare nello specifico nessun gruppo.
+	PAR: Se specificato, contiene la ragione sociale di un'attività commerciale, ente pubblico o associazione colpita dal furto. Se vuoto, non menzionarlo.
+	LOC: Luogo del furto (es. città, via, tipo di struttura). Se vuoto, non menzionarlo.
+
+Regole logiche:
+Tutte le stringhe presenti nel JSON devono comparire nella notizia così come sono, senza riformulazioni. Ad esempio, se AUT contiene un span che recita "16enne", nella notizia deve comparire "16enne" e non può essere riformulato in "16 anni".
+Se AUTG non è vuoto, gli span che contiene servono per descrivere un gruppo criminale, mentre gli span centenuti in AUT descrivono i singoli autori.
+Se VICG non è vuoto, gli span che contiene servono per descrivere un gruppo di vittime, mentre gli span centenuti in VIC descrivono le singole vittime.
+Se PAR non è vuoto, VIC è vuoto.

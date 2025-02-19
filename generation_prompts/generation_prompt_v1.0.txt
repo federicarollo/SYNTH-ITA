@@ -1,0 +1,21 @@
+Ecco il json strutturato:
+
+         <JSON_object>
+
+    Devi generare solamente una notizia di furto, nessuna nota o alternative, che potrebbe essere scritta in un giornale, esclusivamente in lingua italiana, partendo dal JSON sopra riportato. La notizia deve contenere al suo interno tutte le stringhe contenute nei campi sotto elencati che hanno le seguenti caratteristiche, senza aggiungere informazioni aggiuntive che non siano presenti nel JSON, ma possono essere aggiunti termini generici:
+
+    • AUT contiene una lista di liste di stringhe. Ciascuna lista contiene le caratteristiche relative a un singolo autore del furto, quali: il nome proprio o se è presente un acronimo riguarda le iniziali del nome e del cognome, età, razza, etnia, residenza, abitante/nativo, sesso, occupazione, status giuridico (es. "incensurato", "pregiudicato", "gravato da precedenti"). Se questo campo è una lista vuota bisogna considerare un singolo autore del furto come sconosciuto (o con termini generici come "ladro", "malvivente").
+    • AUTG, una lista di stringhe. Queste informazioni sono relative all'intero gruppo di autori del crimine. Se questo campo non è vuoto utilizzare nell'elenco delle logiche quelle relative a questo campo AUTG. Altrimenti se è vuoto non utilizzare la logica relativa ad AUTG e non specificare ne riportare nulla riguardo ad un gruppo criminale.
+    • OBJ, una lista di liste di stringhe. Ogni lista rappresenta un oggetto rubato e, se presente, ne specifica la quantità. Tutti gli oggetti devono essere riportati nella notizia, e per ogni oggetto riportare solamente la quantità solo se presente.
+    • VIC, una lista di liste di stringhe. Ciascuna lista contiene le stringhe relative a una singola vittima che ha subito il furto, quali: il nome proprio o se è presente un acronimo riguarda le iniziali del nome e del cognome, le informazioni socio-demografiche di riferimento, quali età, razza, etnia, residenza, abitante/nativo, sesso, occupazione. Se questo campo è vuoto non bisogna riportare nessuna informazione sulla vittima (o con termini generici come "vittima", "proprietario").
+    • VICG, una lista di stringhe. Queste informazioni sono relative al gruppo di vittime che ha subito il furto. Se questo campo non è vuoto utilizzare nell'elenco delle logiche quelle relative al campo VICG. Altrimenti se è vuoto non utilizzare la logica relativa ad VICG e non specificare ne riportare nulla riguardo ad un gruppo di vittime.
+    • PAR, stringa riferita alla parte lesa dal furto. Può essere un'attività commerciale (negozi, aziende, supermercati, ecc), un'ente pubblico (comune, provincia, scuola, ecc) o un'associazione, ma non deve essere una persona fisica. Se questo campo è vuoto non bisogna ne citare ne riportare nessuna informazione sulla parte lesa, altrimenti se il campo PAR nel JSON non è vuoto utilizzare la logica riferita al campo PAR.
+    • LOC, una lista di stringhe, contenente le informazioni riferite ad un singolo luogo dell'azione criminale, quali città, zona cittadina (periferia o centro), via, numero civico, tipo di struttura ("abitazione", "casa", "appartamento", "condominio"). Se questo campo è vuoto non bisogna riportare nessuna informazione sul luogo del furto.
+    • WHEN, una lista di stringhe contenente le informazioni riferite alle espressioni temporali del furto.
+    • HOW, una lista di stringhe contenente le informazioni riferite a come è stato compiuto il furto da parte dei criminali.
+
+e le seguenti logiche:
+
+    • AUTG: Se AUTG è popolato, allora la notizia deve contenere le informazioni contenute in questo campo per descrivere l'intero gruppo di autori del furto. Inoltre, se il campo AUT è popolato, gli elementi dentro ogni singola lista devono essere usati per descrivere solamente un singolo soggetto del gruppo criminale.
+    • PAR: Se PAR è popolato, il campo LOC può contenere le stesse informazioni e/o informazioni aggiuntive sul luogo in cui si è verificato il furto.
+    • VICG: Se VICG è popolato, allora la notizia deve contenere le informazioni contenute in questo campo per descrivere l'intero gruppo di vittime del furto. Inoltre se il campo VIC è popolato, gli elementi dentro ogni singola lista devono essere usati per descrivere solamente una singola vittima.
