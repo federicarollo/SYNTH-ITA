@@ -1,9 +1,10 @@
 import json
+import os
 
 from random import randint
 from datetime import datetime, timedelta
 
-from utils import (
+from .utils import (
                     preserve_tuples,
                     restore_tuples,
                     select_elements_from_collections,
@@ -11,8 +12,8 @@ from utils import (
                     numbers_to_numeric_word
 )
 
-
-datapath = 'data'
+dir_path = os.path.dirname(os.path.realpath(__file__))
+datapath = f"{dir_path}/data"
 
 with open(f"{datapath}/company_objects.json") as f:
     company_to_objects = json.load(f)['categories']

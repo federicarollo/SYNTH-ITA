@@ -1,4 +1,5 @@
 import nltk, re
+import copy
 
 from string import punctuation
 from random import randint

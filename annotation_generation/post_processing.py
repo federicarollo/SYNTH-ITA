@@ -1,15 +1,17 @@
 import json
+import os
 
-from utils import (
+from .utils import (
                     preserve_tuples,
                     restore_tuples,
                     select_elements_from_collections,
                     clean_italian_span,
                     numbers_to_numeric_word,
-                    numeric_word_to_numbers
+                    numeric_word_to_numbers,
+                    flatten_nested_list
 )
-
-datapath = 'data'
+dir_path = os.path.dirname(os.path.realpath(__file__))
+datapath = f"{dir_path}/data"
 
 with open(f"{datapath}/company_objects.json") as f:
     company_to_objects = json.load(f)['categories']
@@ -67,6 +69,7 @@ accents = {
             "Ã¬": "ì",
             "Ã": "à",
 }
+
 
 
 objects = []
@@ -279,6 +282,9 @@ def add_country_names(nationalities):
         {**nationality, "place_name": find_country_name(nationality)}
         for nationality in nationalities
     ]
+
+
+nationalities = add_country_names(nationalities)
 
 
 def get_capital(proper_name):
@@ -1050,7 +1056,6 @@ def extract_text(data):
 def check_validity(annotation, text):
     is_in = True
 
-
     missing_count = {'OBJ': 0, 'AUT': 0, 'AUTG': 0, 'VIC': 0, 'VICG': 0, 'PAR': 0, 'LOC': 0}
 
     total_count = {'OBJ': 0, 'AUT': 0, 'AUTG': 0, 'VIC': 0, 'VICG': 0, 'PAR': 0, 'LOC': 0}
@@ -1080,10 +1085,27 @@ def check_validity(annotation, text):
 
 if __name__ == "__main__":
 
-    nationalities = add_country_names(nationalities)
-    
-    with open("generated_dataset.json", encoding='utf-8') as f:
+    # nationalities = add_country_names(nationalities)
+
+    with open("generated_dataset_second_round.json", encoding='utf-8') as f:
         data = json.load(f)
+
+    start_delimiter = "<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
+    end_delimiter = "<|eot_id|>"
+
+    for i, el in enumerate(data):
+        start_index = data[i]['text'].rfind(start_delimiter) + len(start_delimiter)
+        end_index = data[i]['text'].rfind(end_delimiter)
+        data[i]['text'] = data[i]['text'][start_index:end_index]
+
+        for accent, correction in accents.items():
+            data[i]['text'] = data[i]['text'].replace(accent, correction)
+
+
+    # with open("C:\\Users\\giova\\Desktop\\Esperimenti\\Github_repositories\\SYNTH-ITA\\synthetic_dataset\\generated_annotations.json", encoding='utf-8') as f:
+    #     annotations = json.load(f)
+    #
+    # data = [{'text': text, 'annotation': annotation} for text, annotation in zip(generated, annotations)]
 
     missing_counts = []
     total_counts = []
@@ -1095,7 +1117,6 @@ if __name__ == "__main__":
     not_valid = []
 
     for i, el in enumerate(data):
-
         print(i)
 
         missing_count, total_count = check_validity(data[i]['annotation'], data[i]['text'])
@@ -1109,9 +1130,12 @@ if __name__ == "__main__":
             data[i]['annotation'] = annotation
 
             missing_count, total_count = check_validity(data[i]['annotation'], data[i]['text'])
+            sum_of_values = sum(list(missing_count.values()))
 
 
-        missing_counts.append(missing_count)
+        if sum_of_values > 0:
+            missing_counts.append(missing_count)
+
         total_counts.append(total_count)
 
         for k, v in missing_count.items():
@@ -1120,12 +1144,24 @@ if __name__ == "__main__":
         for k, v in total_count.items():
             sums_counts[k] += v
 
-
         sum_of_values = sum(list(missing_count.values()))
-
-        print(sum_of_values)
 
         if sum_of_values > 0:
             not_valid.append({'text': el['text'], 'annotation': el['annotation']})
         else:
             valid.append({'text': el['text'], 'annotation': el['annotation']})
+
+
+    print(len(missing_counts))
+
+    count = 0
+    for el in missing_counts:
+        if sum(list(el.values())) == 2:
+            count += 1
+
+    print(count)
+
+    print(sum(list(sums_missing.values()))/sum(list(sums_counts.values()))*100)
+
+    for k, v in sums_counts.items():
+        print(f"{k}:", (sums_missing[k] / sums_counts[k])*100)
