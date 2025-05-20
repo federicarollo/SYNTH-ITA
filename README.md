@@ -14,10 +14,9 @@ The GitHub repository contains the following directories:
   - **V2.0**
 - `synthetic_dataset`: Contains the final synthetic dataset. For each article, the following are provided:
   - The generated fictitious annotations.
-  - The news articles created with **Llama-3-8B-Instruct** using **prompt V1.1**.
-  - The news articles created with **Llama-3-8B-Instruct** using **prompt V2.0**.
-  - The news articles created with **Qwen2.5-7B-Instruct** using **prompt V2.0**.
-  - The news articles created with **Qwen2.5-14B-Instruct** using **prompt V2.0**.
+  - The news articles created with **Llama-3-8B-Instruct**.
+  - The news articles created with **Qwen2.5-7B-Instruct**.
+  - The news articles created with **Qwen2.5-14B-Instruct**.
 
 ## Usage
 
