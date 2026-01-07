@@ -11,8 +11,6 @@ Ecco il json strutturato:
     • VICG, una lista di stringhe. Queste informazioni sono relative al gruppo di vittime che ha subito il furto. Se questo campo non è vuoto utilizzare nell'elenco delle logiche quelle relative al campo VICG. Altrimenti se è vuoto non utilizzare la logica relativa ad VICG e non specificare ne riportare nulla riguardo ad un gruppo di vittime.
     • PAR, stringa riferita alla parte lesa dal furto. Può essere un'attività commerciale (negozi, aziende, supermercati, ecc), un'ente pubblico (comune, provincia, scuola, ecc) o un'associazione, ma non deve essere una persona fisica. Se questo campo è vuoto non bisogna ne citare ne riportare nessuna informazione sulla parte lesa, altrimenti se il campo PAR nel JSON non è vuoto utilizzare la logica riferita al campo PAR.
     • LOC, una lista di stringhe, contenente le informazioni riferite ad un singolo luogo dell'azione criminale, quali città, zona cittadina (periferia o centro), via, numero civico, tipo di struttura ("abitazione", "casa", "appartamento", "condominio"). Se questo campo è vuoto non bisogna riportare nessuna informazione sul luogo del furto.
-    • WHEN, una lista di stringhe contenente le informazioni riferite alle espressioni temporali del furto.
-    • HOW, una lista di stringhe contenente le informazioni riferite a come è stato compiuto il furto da parte dei criminali.
 
 e le seguenti logiche:
 
