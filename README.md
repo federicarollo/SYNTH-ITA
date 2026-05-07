@@ -17,6 +17,7 @@ The GitHub repository contains the following directories:
   - The news articles created with **Llama-3-8B-Instruct**.
   - The news articles created with **Qwen2.5-7B-Instruct**.
   - The news articles created with **Qwen2.5-14B-Instruct**.
+  - The news articles created with **DeepSeek-V2-Chat**.
 
 ## Usage
 
