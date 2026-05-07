@@ -1,6 +1,6 @@
 # SYNTH-ITA: SYNthetic THeft dataset for ITAlian event extraction
 
-SYNTH-ITA is a dataset of  **10,000** synthetic news articles about theft events, generated using three Large Language Models: **Llama-3-8B-Instruct**, **Qwen2.5-7B-Instruct**, **Qwen2.5-14B-Instruct**. The dataset is designed for **Event Extraction** related to crime events from news articles and is based on the annotation schema for crime news articles introduced with the Italian dataset [DICE](https://github.com/federicarollo/Italian-Crime-News).
+SYNTH-ITA is a dataset of  **10,000** synthetic news articles about theft events, generated using three Large Language Models: **Llama-3-8B-Instruct**, **Qwen2.5-7B-Instruct**, **Qwen2.5-14B-Instruct**, and **DeepSeek-V2-Chat**. The dataset is designed for **Event Extraction** related to crime events from news articles and is based on the annotation schema for crime news articles introduced with the Italian dataset [DICE](https://github.com/federicarollo/Italian-Crime-News).
 
 ## Repository Structure
 
